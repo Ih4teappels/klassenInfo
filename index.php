@@ -8,3 +8,15 @@
 
 	include 'models/get_klas.php';
 ?>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<script src="js/util/HttpRequest.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
