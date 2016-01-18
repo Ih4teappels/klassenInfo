@@ -4,6 +4,9 @@
 p{
     display: inline-block;
 }
+h2{
+    display: inline-block;
+}
 #wrapper{
     width: 70%;
     margin: auto;
@@ -12,6 +15,11 @@ p{
     display: inline-block;
 }
 .placeholderImg{
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+}
+#personTxt{
     width: 50%;
-    height: 50%;
+    display: inline-block;
 }
