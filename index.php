@@ -7,6 +7,7 @@
 	include 'views/header.php';
 	include 'views/rad.php';
 	include 'views/top3.php';
+	include 'views/eyecolour.php';
 //	include 'models/get_klas.php';
 	include 'views/footer.php';
 ?>

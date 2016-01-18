@@ -1,7 +1,5 @@
-
-
 <div id="top3">
-	<p style="font-weight: bolder;">Top 3 </p><select>
+	<h2>Top 3 </h2><select>
 		<option>Kleinste leerlingen</option>
 		<option>Langste leerlingen</option>
 		<option>Oudste leerlingen</option>
@@ -9,7 +7,7 @@
 	</select>
 	
 
-	<table style="width:100%">
+	<table id="top3Table" style="width:100%">
 		  <tr>
 		    <th colspan="2">1</td>
 		    <td>Voornaam</td>
