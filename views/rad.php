@@ -1,4 +1,6 @@
 <h1>MD2 leerlingen app</h1>
+<p>Radom leerling:</p><a href="index.php" class="randomStudent"> (shuffle)</a><br>
+<img src="img/placeholder.png" alt=""class="placeholderImg">
 <?php
 /**
  * Created by PhpStorm.

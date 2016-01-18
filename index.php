@@ -4,9 +4,10 @@
 	require_once 'includes/config.php' ;
 	// Maak de database connectie
 	require_once 'includes/database.php';
-
+	include 'views/header.php';
 	include 'views/rad.php';
-	include 'models/get_klas.php';
+//	include 'models/get_klas.php';
+	include 'views/footer.php';
 ?>
 
 <html>
@@ -19,4 +20,5 @@
 	<script src="js/main.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+*{
+    margin-bottom:0 ;
+}
+p{
+    display: inline-block;
+}
+#wrapper{
+    width: 70%;
+    margin: auto;
+}
+.randomStudent{
+    display: inline-block;
+}
+.placeholderImg{
+    width: 50%;
+    height: 50%;
+}
