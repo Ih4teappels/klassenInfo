@@ -5,7 +5,7 @@
 	// Maak de database connectie
 	require_once 'includes/database.php';
 
-
+	include 'views/rad.php';
 	include 'models/get_klas.php';
 ?>
 
