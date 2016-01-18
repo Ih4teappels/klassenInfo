@@ -6,6 +6,7 @@
 	require_once 'includes/database.php';
 	include 'views/header.php';
 	include 'views/rad.php';
+	include 'views/top3.php';
 //	include 'models/get_klas.php';
 	include 'views/footer.php';
 ?>
