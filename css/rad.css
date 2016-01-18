@@ -10,6 +10,7 @@ h2{
 #wrapper{
     width: 70%;
     margin: auto;
+    border: 3px solid #000000;
 }
 .randomStudent{
     display: inline-block;
