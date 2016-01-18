@@ -1,0 +1,28 @@
+#eyeColour {
+	display: block;
+	/*float: left;*/
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+#eyeColour table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #1C7293;
+}
+#eyeColour th, td {
+    padding: 5px;
+       
+}
+
+#eyeColour td {
+	padding-left: 3em;
+	padding-right: 3em;
+	text-align: left; 
+}
+
+#eyeColour th {
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: center; 
+}

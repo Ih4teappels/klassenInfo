@@ -6,6 +6,7 @@
 	padding-bottom: 5em;
 }
 
+
 select {
 	margin-bottom: .5em;
 	margin-top: 2em;
@@ -13,23 +14,23 @@ select {
 }
 
 
-table, th, td {
+#top3 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     background-color: #1C7293;
 }
-th, td {
+#top3 th, td {
     padding: 5px;
        
 }
 
-td {
+#top3 td {
 	padding-left: 15em;
 	padding-right: 15em;
 	text-align: left; 
 }
 
-th {
+#top3 th {
 	padding-left: 4em;
 	padding-right: 4em;
 	text-align: center; 
@@ -37,7 +38,7 @@ th {
 
 h2 {
 	display: inline-block;
-	text-align: center;
+	/*text-align: center;*/
 	width: 85%;
 	padding-left: 2em;
 	padding-right: 2em;
