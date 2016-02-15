@@ -6,6 +6,10 @@ var app = app || {};
 // vanuit dit bestand ga je ook je PHP API lastig vallen met de vraag "mag ik alle studenten"
 
 
-studentsModel = {
+app.studentsModel = {
+
+	getAllStudents: function() {
+		console.log("haal alle studenten op");
+	},
 
 };
