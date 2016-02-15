@@ -4,9 +4,3 @@
     Voornaam is een leerling van 190 cm. Hij zit in klas MD2A en behoort tot het geslacht man.
     Zijn ogen zijn blauw.</p></div><br>
 <?php
-/**
- * Created by PhpStorm.
- * User: stijn_000
- * Date: 18-1-2016
- * Time: 11:12
- */
