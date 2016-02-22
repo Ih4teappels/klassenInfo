@@ -5,12 +5,12 @@ var app = app || {};
 // als je op shuffle klikt, dan moet dit script dit afvangen en actie ondernemen
 // om bij de model iets op te halen
 
-app.randomStudentsView = {
+app.eyeColourView = {
 
     init: function(){
 
         // Grab the template script from the dom
-        var templateSrc = document.querySelector("#randomStudentTemplate").innerHTML;
+        var templateSrc = document.querySelector("#eyeColourTemplate").innerHTML;
 
         var testData = {
             students: [

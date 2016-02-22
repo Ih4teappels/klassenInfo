@@ -9,6 +9,7 @@ function initApp()
 
 	app.randomStudentsView.init();
 	app.top3View.init();
+	app.eyeColourView.init();
 
 }
 
