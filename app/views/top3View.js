@@ -10,7 +10,7 @@ app.randomStudentsView = {
     init: function(){
 
         // Grab the template script from the dom
-        var templateSrc = document.querySelector("#eyecolourTemplate").innerHTML;
+        var templateSrc = document.querySelector("#top3template").innerHTML;
 
         var testData = {
             students: [

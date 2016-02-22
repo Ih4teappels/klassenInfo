@@ -21,6 +21,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 	<script src="app/models/StudentsModel.js"></script>
 	<script src="app/views/RandomStudentView.js"></script>
+	<script src="app/views/top3View.js"></script>
 	<script src="app/app.js"></script>
 	<script src="js/util/HttpRequest.js"></script>
 	<script src="js/main.js"></script>
