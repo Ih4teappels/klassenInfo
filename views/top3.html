@@ -6,19 +6,16 @@
 		<option>Jongste leerlingen</option>
 	</select>
 	
-
+<script id="top3template" type="text/x-handlebars-template">
 	<table id="top3Table" style="width:100%">
+		{{#each students}}
 		  <tr>
 		    <th colspan="2">1</td>
-		    <td>Voornaam</td>
+		    <td>{{firstName}} {{lastname}}</td>
 		  </tr>
-		  <tr>
-		    <th colspan="2">2</td>
-		    <td>Voornaam</td>
-		  </tr>
-		  <tr>
-		    <th colspan="2">3</td>
-		    <td>Voornaam</td>
-		  </tr>
+		  {{/each}}
 	</table>
-</div>	
+</script>
+
+	<div class="container"></div>
+</div>
