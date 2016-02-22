@@ -5,7 +5,7 @@ var app = app || {};
 // als je op shuffle klikt, dan moet dit script dit afvangen en actie ondernemen
 // om bij de model iets op te halen
 
-app.randomStudentsView = {
+app.top3View = {
 
     init: function(){
 

@@ -8,6 +8,7 @@ function initApp()
 	// dit is het startpunt van je applicatie. Hier geef je aan de view(s) door welke models ze moeten gebruiken
 
 	app.randomStudentsView.init();
+	app.top3View.init();
 
 }
 
