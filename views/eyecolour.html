@@ -5,11 +5,14 @@
 		    <th colspan="1">Achternaam</td>
 		  </tr>
 		<script id="eyeColourTemplate" type="text/x-handlebars-template">
+		{{#each students}}
 		  <tr>
 		    <td>{{firstName}}</td>
 		    <td>{{lastname}}</td>
 		  </tr>
+		  {{/each}}
 		</script>
+		<div class="container"></div>
 	</table>
-	<div class="container"></div>
+	
 </div>

@@ -11,7 +11,7 @@ app.randomStudentsView = {
 
         // Grab the template script from the dom
         var templateSrc = document.querySelector("#randomStudentTemplate").innerHTML;
-
+        this.shuffleButton = document.querySelector(".randomStudent")
         var testData = {
             students: [
                 {firstName:"Henk", lastname:"Pater"},
@@ -20,17 +20,28 @@ app.randomStudentsView = {
             ]
         };
 
+        this.addEventListener("click",this.studentClicked.bind(this));
+
         // Transform the HTML template into a 'real' template
         this.template = Handlebars.compile(templateSrc);
 
         // call the render function
         this.render(testData);
 
+
+
     },
 
     render: function(data){
         // we retrieve the container and fill the HTML with the template + data
         document.querySelector(".container").innerHTML = this.template(data);
+    },
+
+    studentClicked: function(e) {
+            var targetRow = e.target;
+            console.log(targetRow.dataset.id);
     }
+
+
 
 }
