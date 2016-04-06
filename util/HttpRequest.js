@@ -1,6 +1,11 @@
 /**
  * de constructor van HttpRequest. Hierbinnen doen we niets
  * maar nu kunnen we wel nieuwe instanties aanmaken
+ *
+ * var testHttpRequest = new HttpRequest();
+ * testHttpRequest.load("http://jsonplaceholder.typicode.com/posts", function(data){
+ *      console.log('de geladen data is:' + data);
+ * });
  */
 function HttpRequest()
 {

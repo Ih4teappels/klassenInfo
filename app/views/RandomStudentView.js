@@ -7,41 +7,53 @@ var app = app || {};
 
 app.randomStudentsView = {
 
-    init: function(){
+    // onze init functie voeren we 1x uit
+    // deze functie initialiseert alles
+    init: function(model){
+
+        this.model = model;
 
         // Grab the template script from the dom
-        var templateSrc = document.querySelector("#randomStudentTemplate").innerHTML;
-        this.shuffleButton = document.querySelector(".randomStudent")
-        var testData = {
-            students: [
-                {firstName:"Henk", lastname:"Pater"},
-                {firstName:"Jan", lastname:"Klaasen"},
-                {firstName:"Piet", lastname:"Hengst"}
-            ]
-        };
+        var templateSrc = document.querySelector("#students-template").innerHTML;
 
-        this.addEventListener("click",this.studentClicked.bind(this));
-
-        // Transform the HTML template into a 'real' template
         this.template = Handlebars.compile(templateSrc);
 
-        // call the render function
-        this.render(testData);
+        this.container = document.querySelector(".container");
+        this.shuffleButton = document.querySelector("#shuffle");
 
 
+        // de functie bind() zorgt ervoor dat je kunt vastzetten waar 'this' naar verwijst
+        this.shuffleButton.addEventListener("click", this.shuffleStudent.bind(this));
 
+        this.model.addListener("CHANGE", this.shuffleStudent.bind(this));
+
+        this.container.addEventListener("click", this.studentClicked.bind(this));
     },
 
-    render: function(data){
-        // we retrieve the container and fill the HTML with the template + data
-        document.querySelector(".container").innerHTML = this.template(data);
+    render:function(data){
+        this.container.innerHTML = this.template(data);
     },
 
-    studentClicked: function(e) {
-            var targetRow = e.target;
-            console.log(targetRow.dataset.id);
+    shuffleStudent: function(e){
+        // haal een random student op bij de model
+        // en gebruik this.template() om vervolgens de template te updaten
+        var randomStudent = this.model.getRandomStudent();
+        console.log(randomStudent);
+        this.render(randomStudent);
+    },
+
+    studentClicked: function(e){
+
+        // elke event die gebeurd (click, mousemove, etc.) geeft een event parameter
+        // dit event object geeft je veel informatie over wat er is gebeurd
+        // bijvoorbeeld op wie er is geklikt
+        var clickedRow = e.target,
+            id = clickedRow.dataset.id; // we gebruiken .dataset.id om het attributt data-id uit te lezen
+        console.log(clickedRow);
+        // we weten nu op wie er is geklikt
+        //console.log(id);
+
+
     }
-
-
 
 }

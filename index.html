@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="css/rad.css">
+<link rel="stylesheet" type="text/css" href="css/top3.css">
+<link rel="stylesheet" type="text/css" href="css/eye.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
+</head>
+<body>
+<div id="wrapper">
+<h1>MD2 leerlingen app</h1>
+<div id="random">
+
+	<p>Random leerling:</p>
+	<div id="shuffle">shuffle</div><br>
+	<div class="container"></div>
+
+	
+
+    
+</div>
+
+<div id="top3">
+	<h2>Top 3 </h2><select>
+		<option>Kleinste leerlingen</option>
+		<option>Langste leerlingen</option>
+		<option>Oudste leerlingen</option>
+		<option>Jongste leerlingen</option>
+	</select>
+	
+<script id="top3template" type="text/x-handlebars-template">
+	<table id="top3Table" style="width:100%">
+		{{#each students}}
+		  <tr>
+		    <th colspan="2">1</td>
+		    <td>{{Firstname}} {{Lastname}}</td>
+		  </tr>
+		  {{/each}}
+	</table>
+</script>
+
+<div id="eyeColour">
+	<table id="eyeTable" style="width:100%">
+		  <tr>
+		    <th colspan="1">Voornaam</td>
+		    <th colspan="1">Achternaam</td>
+		  </tr>
+		<script id="eyecolourTemplate" type="text/x-handlebars-template">
+		  <tr>
+		    <td>{{Firstname}}</td>
+		    <td>{{Lastname}}</td>
+		  </tr>
+		</script>
+	</table>
+	<div class="container"></div>
+</div>
+
+	<div class="container"></div>
+</div>
+
+	
+<script id="students-template" type="text/x-handlebars-template">
+	
+	
+	<img src="img/placeholder.png" alt=""class="placeholderImg"> 
+	<div id="personTxt">
+		<h2>{{Firstname}} {{Lastname}}</h2><p data-id="{{id}}"> {{Firstname}} has a height of {{Height}} Cm. {{Firstname}} is in class {{Class}} and is a {{Gender}}. 
+		The color of his eyes are {{Eyecolor}}.</p>
+	</div><br>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+<script src="util/EventDispatcher.js"></script>
+<script src="util/HttpRequest.js"></script>
+<script src="app/models/StudentsModel.js"></script>
+<script src="app/views/RandomStudentView.js"></script>
+<script src="app/app.js"></script>
+
+
+</div>
+</body>
+</html>

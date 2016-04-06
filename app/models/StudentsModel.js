@@ -1,14 +1,37 @@
 var app = app || {};
 
-// maak hier een app.StudentsModel object
 // dit object bevat de functies om studenten op te halen, etc.
 // vanuit dit bestand ga je ook je PHP API lastig vallen met de vraag "mag ik alle studenten"
 
-app.studentsModel = {
+// wat doet deze regel code?
+app.studentsModel = Object.create(eventDispatcher);
 
-    loadStudents: function() {
+app.studentsModel.loadStudents = function() {
+    // dit is de functie die de studenten ophaalt bij je PHP pagina
+    // als de studenten zijn geladen, dan dispatcht hij een event
+    // je view (bijvoorbeeld de randomStudentView) moet luisteren naar dit event
+    //
+    // this.dispatch("CHANGE"); // deze 'dispatch' pas uitvoeren als je studenten JSON is geladen
 
-    }
+    // 
+    var self = this;
+    var testHttpRequest = new HttpRequest();
+    testHttpRequest.load("http://localhost/leerjaar2/periode2/PRO/klassenInfo/model/getStudent.php", function(data){
+        self.students = data;
 
+        self.dispatch("CHANGE");
 
+    });
+
+   
+
+};
+
+app.studentsModel.getRandomStudent = function() {
+
+    var rand = this.students[Math.floor(Math.random() * this.students.length)];
+    console.log(rand)
+    return rand;
 }
+
+// welke functies heeft je model nog meer nodig? Maak ze hieronder aan.
